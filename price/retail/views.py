@@ -28,7 +28,7 @@ class InventoryViewSet(viewsets.ModelViewSet):
     """
     queryset = retail_models.Inventory.objects.all()
     serializer_class = InventorySerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class PromotionViewSet(viewsets.ModelViewSet):
     """
@@ -36,7 +36,7 @@ class PromotionViewSet(viewsets.ModelViewSet):
     """
     queryset = retail_models.Promotion.objects.all()
     serializer_class = PromotionSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class AlertViewSet(viewsets.ModelViewSet):
     """
@@ -44,4 +44,4 @@ class AlertViewSet(viewsets.ModelViewSet):
     """
     queryset = retail_models.Alert.objects.all()
     serializer_class = AlertSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]

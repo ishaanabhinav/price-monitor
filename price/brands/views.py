@@ -22,7 +22,7 @@ class BrandViewSet(viewsets.ModelViewSet):
     """
     queryset = brand_model.Brand.objects.all()
     serializer_class = BrandSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class ProductViewSet(viewsets.ModelViewSet):
     """
@@ -30,4 +30,4 @@ class ProductViewSet(viewsets.ModelViewSet):
     """
     queryset = brand_model.Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
