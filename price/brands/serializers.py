@@ -20,7 +20,7 @@ class BrandSerializer(CountryFieldMixin, serializers.HyperlinkedModelSerializer)
         model = brand_model.Brand
         fields = '__all__'
 
-class ProductSerializer(CountryFieldMixin, serializers.HyperlinkedModelSerializer):
+class ProductSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = brand_model.Product
         fields = '__all__'

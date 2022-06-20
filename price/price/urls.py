@@ -24,6 +24,14 @@ from brands import views as brands_views
 router = routers.DefaultRouter()
 router.register(r'users', retail_views.UserViewSet)
 router.register(r'groups', brands_views.GroupViewSet)
+router.register(r'brands', brands_views.BrandViewSet)
+router.register(r'products', brands_views.ProductViewSet)
+
+router.register(r'store', retail_views.StoreViewSet)
+router.register(r'inventory', retail_views.InventoryViewSet)
+router.register(r'promotion', retail_views.PromotionViewSet)
+router.register(r'alert', retail_views.AlertViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
