@@ -1,8 +1,11 @@
 asgiref==3.5.2
+Babel==2.10.3
 backports.zoneinfo==0.2.1
 Django==4.0.5
 django-countries==7.3.2
+django-money==2.1.1
 djangorestframework==3.13.1
+py-moneyed==1.2
 pytz==2022.1
 sqlparse==0.4.2
 typing_extensions==4.2.0
